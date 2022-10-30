@@ -50,7 +50,7 @@ const App = ()=> {
               </Routes>
             </div>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>MiliCom 2022</Footer>
+          <Footer style={{ textAlign: 'center' }}>MiliCo 2022</Footer>
         </Layout>
       </div>
     </BrowserRouter>

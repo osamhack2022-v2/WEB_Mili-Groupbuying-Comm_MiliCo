@@ -37,22 +37,20 @@ class ItemCard extends React.Component{
     }
 
     async componentDidMount(){
-        // try {
-        //     throw(err);
-        //     const data = await axios.get(previewApiUrl, {params: { key, q: this.state.infoLink}});
-        //     console.log(data.data.image);
-        //     this.setState((state)=>{
-        //         state.cardImg = data.data.image;
-        //         return state;
-        //     })
-        // } catch(error){
-        //     // console.log(error);
-        //     // 실패시 부를 이미지
-        //     this.setState((state)=>{
-        //         state.cardImg = "https://mp-seoul-image-production-s3.mangoplate.com/36517_1545847047139204.jpg?fit=around|362:362&crop=362:362;*,*&output-format=jpg&output-quality=80";
-        //         return state;
-        //     })
-        // }
+        try {
+            const data = await axios.get(previewApiUrl, {params: { key, q: this.state.infoLink}});
+            console.log(data.data.image);
+            this.setState((state)=>{
+                state.cardImg = data.data.image;
+                return state;
+            })
+        } catch(error){
+            alert("[개발중] linkpreview 외부API 오류입니다. 임시이미지로 대체 됩니다.");
+            this.setState((state)=>{
+                state.cardImg = "https://mp-seoul-image-production-s3.mangoplate.com/36517_1545847047139204.jpg?fit=around|362:362&crop=362:362;*,*&output-format=jpg&output-quality=80";
+                return state;
+            })
+        }
     }
 
 }

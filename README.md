@@ -55,9 +55,10 @@
 
 ### 필수 구성 환경 (Prerequisites)
 
-- Mysql (v5.7.x)
 - Node.js (v16.17.x Gallium)
 - npm (v8.15.x)
+- Mysql (v5.7.x)
+- **/server/config/config.json에서 Mysql root PW 수정할 것!!**
 
 ### 1. Clone
 
@@ -71,36 +72,41 @@ $ git clone https://github.com/osamhack2022/WEB_Mili-Groupbuying-Comm_MiliCo
 $ npm install
 ```
 
-### 3-A. 개발 모드 (Development Mode)
+### 3. Database Setting
 
-서버 시작 후,
-[`http://localhost:3000`](http://localhost:3000) 에 접속
-
-**개발 모드**: react-dev-server(:3000) & express-server(:3001) 동시 구동.  
-**요청 흐름**: react-dev-server → proxy → express
-
-### 3-A-1. Start webpack-dev-server (frontend development, hot reloading)
-
-```shell
-$ npm run dev
+```bash
+$ mysql -u root -p -e "create database milicodb;"
 ```
 
-### 3-A-2. Start express server (backend development, hot reloading)
+### 4-A. 배포 모드 (Production Mode)
+
+### 4-A-1. Build front-side && Start production server
+
+```shell
+$ npm run build-start
+```
+
+서버 시작 후,
+[`http://localhost:3001`](http://localhost:3001) 에 접속
+
+### 4-B. 개발 모드 (Development Mode)
+
+**개발모드 요청흐름**: react-dev-server → proxy → express
+
+### 4-B-1. Start express server (backend development, hot reloading)
 
 ```shell
 $ npm run start
 ```
 
-### 3-B. 배포 모드 (Production Mode)
+### 4-B-2. Start webpack-dev-server (frontend development, hot reloading)
+
+```shell
+$ npm run dev
+```
 
 서버 시작 후,
 [`http://localhost:3000`](http://localhost:3000) 에 접속
-
-### 3-B-1. Build front-side && Start production server
-
-```shell
-$ npm run build start
-```
 
 <br/><br/> <br/><br/>
 

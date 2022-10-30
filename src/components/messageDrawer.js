@@ -35,7 +35,7 @@ const MessageDrawer = (props) => {
             </Button>
         </Badge>
         <Drawer
-            title="Message (차병호 이병님)"
+            title="Message (차병호 이병님) / [개발중, rest api 추가 필요]"
             placement="right"
             closable={false}
             onClose={onClose}
