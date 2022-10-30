@@ -2,10 +2,12 @@
 @font-face {
   font-family: 'yangjin';
   src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
 /* Layout CSS */
+
+* {
+  font-family: "Noto Sans KR"
+}
 
 Header.my-header{
     background: #fff;
@@ -13,6 +15,9 @@ Header.my-header{
 .site-layout-content {
   background: #fff;
   height:900px;
+}
+.ant-layout-content {
+  background: #fff;
 }
 
 /* Intro CSS */
@@ -24,25 +29,34 @@ h1.intro-title-main{
   margin-bottom: 0px;
   font-family: yangjin;
   color:#FF9933;
-  font-size: 3.9rem;
+  font-size: 4.3rem;
+  line-height: 4.5rem;
+}
+h1.intro-title-main span{
+  color:#FCE9DC;
+  font-family: yangjin;
 }
 h5.intro-title-sub{
   margin-bottom: 0px;
   margin-top: 0px !important;
   font-family: yangjin;
-  color: #F8CBAD;
-  font-size: 1.8rem;
+  color: #FF9933;
+  font-size: 2.6rem;
 }
 .intro-cards-wrapper{
-  margin-top: 30px;
+  margin-top: 50px;
 }
 .intro-card{
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 1.3rem;
   text-align: center;
+  padding: 10px;
 }
 .intro-search-wrapper{
-  margin-top:30px;
+  margin-top:60px;
+}
+.intro-search-wrapper input.ant-input{
+  font-size: 1.5rem !important;
 }
 
 
@@ -199,5 +213,22 @@ form.register-form{
   height: 100%; 
   object-fit: cover;
   object-position: center;
+}
+
+.manage-title+p {
+  font-family:Noto Sans KR;
+  font-size:3rem;
+  font-weight: 500;
+  text-align:center;
+}
+.manage-title+div {
+  font-family:Noto Sans KR;
+  font-size:3rem;
+  font-weight: 500;
+  text-align:center;
+}
+
+div div.ant-ribbon-wrapper {
+  height: 100%;
 }
 
